@@ -3,6 +3,8 @@ import dealDash from "../assets/dealDash.png";
 import dealDashCheckout from "../assets/dealDashCheckout.png";
 import dealDashItem from "../assets/dealDashItem.png";
 import { motion } from "framer-motion";
+import blob1 from "../assets/blob1.png";
+import blob2 from "../assets/blob2.png";
 
 function SectionOne() {
   const fromRight = {
@@ -13,14 +15,30 @@ function SectionOne() {
     hidden: { opacity: 0, x: -400 },
     visible: { opacity: 1, x: 0 },
   };
+
+  const animationProps = {
+    initial: { opacity: 0, scale: 0.5 },
+    animate: { opacity: 1, scale: 1 },
+    transition: {
+      ease: "easeInOut",
+      duration: 1,
+    },
+  };
+
   return (
     <section className="sectionOne">
+      <motion.div className="blobContainer blob1" {...animationProps}>
+        <img src={blob1} alt="" />
+      </motion.div>
+      <motion.div className="blobContainer blob2" {...animationProps}>
+        <img src={blob2} alt="" />
+      </motion.div>
       <motion.div
         className="intro"
         variants={fromRight}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
       >
         <h1>Hi, I'm Jon</h1>
         <p>
@@ -36,7 +54,7 @@ function SectionOne() {
         variants={fromLeft}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 1 }}
       >
         <div className="latestProject">
           <h2>My latest project - DealDash</h2>

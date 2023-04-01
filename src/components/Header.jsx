@@ -11,7 +11,7 @@ function Header() {
       initial="hidden"
       animate="visible"
       variants={fromLeft}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 1 }}
     >
       <nav>
         <ul>
