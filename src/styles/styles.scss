@@ -1,0 +1,32 @@
+@import "./variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: $primaryColor;
+  color: $textColor;
+  font-size: 1.2rem;
+  // overflow: hidden;
+}
+
+header,
+main,
+footer {
+  max-width: 1500px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $altColor;
+}
