@@ -11,7 +11,7 @@ const projects = [
     },
     {
         image: auctionHouse,
-        title: "Project 2",
+        title: "AuctionHouse",
         shortDescription: "In this semester project, I built an auction site that enables users to register and log in, earn credits by selling items, bid on listings using credits, and edit or delete their listings.",
         repoLink: "https://github.com/Jonast96/AuctionHouse",
         liveSiteLink: "https://spectacular-medovik-5141db.netlify.app/",

@@ -8,6 +8,13 @@
   flex-direction: column;
   gap: 80px;
   padding: 0 20px;
+
+  .desktopTitle {
+    display: none;
+  }
+  .mobileTitle {
+    display: block;
+  }
   .intro {
     text-align: center;
     max-width: 800px;
@@ -17,11 +24,12 @@
     }
   }
   .info {
-    display: flex;
+    display: grid;
     justify-content: space-around;
     flex-direction: column;
     margin: 0 auto;
   }
+
   .links {
     display: flex;
     justify-content: space-around;
@@ -48,13 +56,26 @@
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
+
+    .info {
+      order: 1;
+    }
   }
 }
 
 @media screen and (min-width: 750px) {
   .sectionThree {
+    .desktopTitle {
+      display: block;
+    }
+    .mobileTitle {
+      display: none;
+    }
     .project {
       grid-template-columns: 1fr 1fr;
+    }
+    .image-right {
+      direction: rtl;
     }
   }
 }
