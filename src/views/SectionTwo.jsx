@@ -9,15 +9,12 @@ import javaScript from "../assets/java-script.png";
 
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 function SectionTwo() {
   const ref = useRef(null);
   const isInView = useInView(ref);
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
+
   return (
     <section ref={ref} className={isInView ? "sectionTwo show" : "sectionTwo"}>
       <motion.div

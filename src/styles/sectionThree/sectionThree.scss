@@ -1,0 +1,56 @@
+@import "../variables";
+.sectionThree {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0 20px;
+  .intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+  .info {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .links {
+    display: flex;
+    justify-content: space-around;
+    a {
+      color: $altColor;
+      font-size: 1.3rem;
+    }
+  }
+  p {
+    font-weight: 200;
+    font-size: 1.3rem;
+  }
+  h3 {
+    color: $textColor;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .sectionThree {
+    .project {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
