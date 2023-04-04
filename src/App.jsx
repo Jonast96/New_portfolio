@@ -6,7 +6,6 @@ import SectionThree from "./views/SectionThree";
 function App() {
   return (
     <div className="App">
-      <header>{/* <Header /> */}</header>
       <main>
         <SectionOne />
         <SectionTwo />
