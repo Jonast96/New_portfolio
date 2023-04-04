@@ -1,12 +1,14 @@
 @import "../variables";
 
 .sectionOne {
+  max-width: 1500px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   gap: 15vh;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 101vh;
 
   .blobContainer {
     display: none;

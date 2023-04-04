@@ -1,5 +1,9 @@
 @import "../variables";
+
 .sectionThree {
+  line-height: 1.4;
+
+  background-color: $thirdColor;
   display: flex;
   flex-direction: column;
   gap: 80px;

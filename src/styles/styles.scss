@@ -15,9 +15,12 @@ body {
 header,
 main,
 footer {
-  max-width: 1500px;
-  padding: 20px;
   margin: 0 auto;
+}
+
+.sectionOne,
+.sectionTwo {
+  padding: 20px;
 }
 
 h1,
@@ -27,4 +30,11 @@ h4,
 h5,
 h6 {
   color: $altColor;
+}
+
+@media screen and (min-width: 600px) {
+  .sectionOne,
+  .sectionTwo {
+    padding: 0px;
+  }
 }
