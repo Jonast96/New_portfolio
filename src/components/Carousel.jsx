@@ -8,7 +8,13 @@ console.log(projects);
 
 function ProjectCarousel() {
   return (
-    <Carousel>
+    <Carousel
+      emulateTouch={true}
+      infiniteLoop={true}
+      showStatus={false}
+      verticalSwipe="standard"
+      autoFocus={false}
+    >
       {projects.map((project, index) => {
         return (
           <div key={index} className="project">

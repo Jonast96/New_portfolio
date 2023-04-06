@@ -8,23 +8,28 @@ import bootstrap from "../assets/bootstrap.png";
 import javaScript from "../assets/java-script.png";
 
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 function Section2() {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const h2Ref = useRef(null);
+  const isInView = useInView(h2Ref);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  if (isInView && !hasAnimated) {
+    setHasAnimated(true);
+  }
 
   return (
-    <section ref={ref} className={isInView ? "sectionTwo show" : "sectionTwo"}>
+    <section className="sectionTwo">
       <div className="sectionTwoContent">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+          animate={hasAnimated ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
           transition={{ duration: 1 }}
         >
           <div className="info">
-            <h2>A little more about me</h2>
+            <h2 ref={h2Ref}>A little more about me</h2>
             <p>
               As a front-end developer with a passion for creating things from
               scratch, I've discovered that the art of combining simple elements
@@ -47,7 +52,7 @@ function Section2() {
         </motion.div>
         <motion.div
           initial={{ x: 100, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
+          animate={hasAnimated ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
           transition={{ duration: 1 }}
         >
           <div className="mySkills">
