@@ -1,0 +1,44 @@
+@import "./variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: $primaryColor;
+  color: $textColor;
+  font-size: 1.2rem;
+  overflow-x: hidden;
+}
+section {
+  padding: 10px;
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $altColor;
+}
+
+@media screen and (min-width: 400px) {
+  .sectionOne,
+  .sectionTwo {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .sectionOne,
+  .sectionTwo {
+    padding: 50px;
+  }
+}
