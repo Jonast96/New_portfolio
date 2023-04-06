@@ -11,7 +11,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 
-function SectionTwo() {
+function Section2() {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -67,4 +67,4 @@ function SectionTwo() {
   );
 }
 
-export default SectionTwo;
+export default Section2;

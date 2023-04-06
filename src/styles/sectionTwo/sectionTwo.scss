@@ -1,6 +1,9 @@
 @import "../variables";
 
 .sectionTwo {
+  h2 {
+    font-size: 2.5rem;
+  }
   display: grid;
   place-content: center;
   min-height: 80vh;

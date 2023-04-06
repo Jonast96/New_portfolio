@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import blob1 from "../assets/blob1.png";
 import blob2 from "../assets/blob2.png";
 
-function SectionOne() {
+function Section1() {
   const fromRight = {
     hidden: { opacity: 0, x: 400 },
     visible: { opacity: 1, x: 0 },
@@ -77,4 +77,4 @@ function SectionOne() {
     </section>
   );
 }
-export default SectionOne;
+export default Section1;

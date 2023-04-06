@@ -1,81 +1,67 @@
 @import "../variables";
 
-.sectionThree {
-  line-height: 1.4;
-
-  background-color: $thirdColor;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 0 20px;
-
-  .desktopTitle {
-    display: none;
-  }
-  .mobileTitle {
-    display: block;
-  }
-  .intro {
+.section3 {
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  .projectsIntro {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 50px 0;
     h2 {
-      margin-bottom: 20px;
+      margin: 10px 0;
     }
-  }
-  .info {
-    display: grid;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 0 auto;
-  }
-
-  .links {
-    display: flex;
-    justify-content: space-around;
-    a {
-      color: $altColor;
-      font-size: 1.3rem;
-    }
-  }
-  p {
-    font-weight: 200;
-    font-size: 1.3rem;
-  }
-  h3 {
-    color: $textColor;
-    text-align: center;
-  }
-  img {
-    width: 100%;
-    border-radius: 5px;
   }
   .project {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
     .info {
-      order: 1;
+      font-weight: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 90%;
+      h3 {
+        font-size: 3rem;
+      }
+      .links {
+        a {
+          color: $altColor;
+        }
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
     }
   }
 }
 
-@media screen and (min-width: 750px) {
-  .sectionThree {
-    .desktopTitle {
-      display: block;
-    }
-    .mobileTitle {
-      display: none;
-    }
+@media screen and (min-width: 700px) {
+  .section3 {
     .project {
-      grid-template-columns: 1fr 1fr;
-    }
-    .image-right {
-      direction: rtl;
+      .info {
+        width: auto;
+      }
     }
   }
 }
