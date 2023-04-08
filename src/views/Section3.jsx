@@ -40,6 +40,7 @@ function Section3() {
       </motion.div>
 
       <motion.div
+        id="projects"
         ref={projectCarouselRef}
         initial={{ opacity: 0, y: 50 }}
         animate={

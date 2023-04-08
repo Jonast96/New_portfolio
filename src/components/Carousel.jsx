@@ -23,8 +23,12 @@ function ProjectCarousel() {
               <h3>{project.title}</h3>
               <p>{project.shortDescription}</p>
               <div className="links">
-                <a href={project.repoLink}>Repository</a>
-                <a href={project.liveSiteLink}>Live site</a>
+                <a target="_blank" href={project.repoLink}>
+                  Repository
+                </a>
+                <a target="_blank" href={project.liveSiteLink}>
+                  Live site
+                </a>
               </div>
             </div>
           </div>

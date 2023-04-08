@@ -57,7 +57,12 @@ function Section1() {
         transition={{ duration: 1 }}
       >
         <div className="latestProject">
-          <h2>My latest project - DealDash</h2>
+          <h2>
+            My latest project -{" "}
+            <a href="https://joyful-dodol-3ac527.netlify.app/" target="_blank">
+              DealDash
+            </a>
+          </h2>
           <div className="imgDiv">
             <div>
               <img src={dealDash} alt="" />
@@ -70,7 +75,7 @@ function Section1() {
             </div>
           </div>
           <p>
-            View more of my <a href="#">Projects</a>
+            View more of my <a href="#projects">Projects</a>
           </p>
         </div>
       </motion.div>

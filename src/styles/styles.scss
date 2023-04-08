@@ -3,7 +3,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222831; // primaryColor
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1b2027; // secondaryColor
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #ff5035; // altColor
+  }
+}
+
+// For Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1b2027 #222831; // secondaryColor primaryColor
+}
+
+// For Internet Explorer
+* {
+  -ms-overflow-style: none;
+}
+
+::-ms-scrollbar {
+  display: none;
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: $primaryColor;
