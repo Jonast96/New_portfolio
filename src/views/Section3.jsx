@@ -22,7 +22,7 @@ function Section3() {
   }
 
   return (
-    <section className="section3">
+    <section id="projects" className="section3">
       <motion.div
         ref={projectsIntroRef}
         initial={{ opacity: 0, y: 50 }}

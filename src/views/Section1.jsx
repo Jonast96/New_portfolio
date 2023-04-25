@@ -1,7 +1,7 @@
 import "../styles/sectionOne/sectionOne.scss";
-import dealDash from "../assets/dealDash.png";
-import dealDashCheckout from "../assets/dealDashCheckout.png";
-import dealDashItem from "../assets/dealDashItem.png";
+import img1 from "../assets/1.png";
+import img2 from "../assets/2.png";
+import img3 from "../assets/3.png";
 import { motion } from "framer-motion";
 import blob1 from "../assets/blob1.png";
 import blob2 from "../assets/blob2.png";
@@ -57,20 +57,30 @@ function Section1() {
         transition={{ duration: 1 }}
       >
         <div className="latestProject">
-          <h2>My latest project - DealDash</h2>
+          <h2>
+            Currently working on -{" "}
+            <a href="https://dev-jon-holidaze.netlify.app/" target="_blank">
+              Holidaze
+            </a>
+          </h2>
           <div className="imgDiv">
             <div>
-              <img src={dealDash} alt="" />
+              <img src={img1} alt="" />
             </div>
             <div>
-              <img src={dealDashCheckout} alt="" />
+              <img src={img2} alt="" />
             </div>
             <div>
-              <img src={dealDashItem} alt="" />
+              <img src={img3} alt="" />
             </div>
           </div>
+
           <p>
-            View more of my <a href="#">Projects</a>
+            View this in progress project on{" "}
+            <a href="https://github.com/Jonast96/Holidaze" target="_blank">
+              Github
+            </a>
+            , or view more of my <a href="#projects">Projects</a>
           </p>
         </div>
       </motion.div>
