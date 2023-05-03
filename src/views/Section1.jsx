@@ -63,7 +63,11 @@ function Section1() {
               Holidaze
             </a>
           </h2>
-          <div className="imgDiv">
+          <a
+            target="blank"
+            href="https://dev-jon-holidaze.netlify.app/"
+            className="imgDiv"
+          >
             <div>
               <img src={img1} alt="" />
             </div>
@@ -73,7 +77,7 @@ function Section1() {
             <div>
               <img src={img3} alt="" />
             </div>
-          </div>
+          </a>
 
           <p>
             View this in progress project on{" "}
