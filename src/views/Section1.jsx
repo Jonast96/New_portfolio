@@ -16,23 +16,8 @@ function Section1() {
     visible: { opacity: 1, x: 0 },
   };
 
-  const animationProps = {
-    initial: { opacity: 0, scale: 0.5 },
-    animate: { opacity: 1, scale: 1 },
-    transition: {
-      ease: "easeInOut",
-      duration: 1,
-    },
-  };
-
   return (
     <section className="sectionOne">
-      <motion.div className="blobContainer blob1" {...animationProps}>
-        <img src={blob1} alt="" />
-      </motion.div>
-      <motion.div className="blobContainer blob2" {...animationProps}>
-        <img src={blob2} alt="" />
-      </motion.div>
       <motion.div
         className="intro"
         variants={fromRight}
@@ -40,7 +25,9 @@ function Section1() {
         animate="visible"
         transition={{ duration: 1 }}
       >
-        <h1>Hi, I'm Jon</h1>
+        <h1>
+          Hi, I'm <span className="name">Jon</span>{" "}
+        </h1>
         <p>
           As a creative front-end developer, I bring web designs to life with
           seamless user experiences. Skilled in HTML, CSS, JavaScript and React,

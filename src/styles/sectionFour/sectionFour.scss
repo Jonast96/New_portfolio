@@ -31,11 +31,12 @@
     text-align: center;
 
     a {
-      color: $altColor;
+      color: $buttonColor;
       transition: color 0.3s ease;
+      font-weight: bold;
 
       &:hover {
-        color: $textColor;
+        color: $accentColor;
       }
     }
   }
@@ -66,7 +67,7 @@
         transition: border-color 0.3s ease;
 
         &:focus {
-          border-color: $altColor;
+          border-color: $buttonColor;
         }
       }
 
@@ -78,7 +79,7 @@
 
     .submit-btn {
       background-color: transparent;
-      color: $altColor;
+      color: $textColor;
       padding: 0.8rem 1.5rem;
       border: 2px solid $altColor;
       cursor: pointer;

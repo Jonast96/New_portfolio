@@ -1,9 +1,9 @@
 import "../styles/sectionThree/sectionThree.scss";
-import ProjectCarousel from "../components/Carousel";
-
+import ProjectCard from "../components//ProjectCard";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import projects from "..//data//projects";
 
 function Section3() {
   const projectsIntroRef = useRef(null);
@@ -47,7 +47,19 @@ function Section3() {
         }
         transition={{ duration: 1 }}
       >
-        <ProjectCarousel />
+        <div className="projectsContainer">
+          {projects.map((project) => {
+            return (
+              <ProjectCard
+                image={project.image}
+                title={project.title}
+                shortDescription={project.shortDescription}
+                repoLink={project.repoLink}
+                liveSiteLink={project.liveSiteLink}
+              />
+            );
+          })}
+        </div>
       </motion.div>
     </section>
   );
