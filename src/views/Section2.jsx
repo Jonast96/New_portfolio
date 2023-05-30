@@ -56,7 +56,6 @@ function Section2() {
           transition={{ duration: 1 }}
         >
           <div className="mySkills">
-            <h4>My skills</h4>
             <div className="imgDiv">
               <img src={html} alt="" />
               <img src={css} alt="" />
